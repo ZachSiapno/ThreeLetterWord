@@ -63,6 +63,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="e9y-i3-E2K" appends="YES" id="9aY-D6-RcV"/>
+                                        </connections>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -75,8 +79,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="currentLetterLabel" destination="Rho-cX-ix8" id="OM2-NW-joB"/>
+                        <outlet property="stackView" destination="79U-iX-tJo" id="wrM-qP-Svp"/>
+                        <outletCollection property="wordLabels" destination="SKJ-6I-6yg" collectionClass="NSMutableArray" id="LRG-90-IlH"/>
+                        <outletCollection property="wordLabels" destination="ueg-WC-O3p" collectionClass="NSMutableArray" id="KRe-pR-tOp"/>
+                        <outletCollection property="wordLabels" destination="Anu-Jh-p9N" collectionClass="NSMutableArray" id="KuU-08-sze"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="e9y-i3-E2K">
+                    <connections>
+                        <action selector="stackTapped:" destination="BYZ-38-t0r" id="NOR-Bk-uMV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="139" y="100"/>
         </scene>
